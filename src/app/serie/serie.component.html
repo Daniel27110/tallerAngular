@@ -1,3 +1,39 @@
-<p>
-  This is a list of series
-</p>
+<!-- Tabla Listado de series -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">name</th>
+            <th scope="col">Channel</th>
+            <th scope="col">Seasons</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- Iteracion de series -->
+
+          <tr *ngFor="let serie of series; let i = index">
+            <th>{{serie.id}}</th>
+            <td><a href="{{serie.webpage}}">{{serie.name}}</a></td>
+            <td>{{serie.channel}}</td>
+            <td>{{serie.seasons}}</td>
+          </tr>
+
+        </tbody>
+
+        <!-- Promedio de temporadas de todas las series-->
+
+        <tfoot>
+          <tr>
+            <td id="averageSeasons"></td>
+          </tr>
+
+      </table>
+
+    </div>
+  </div>
+</div>

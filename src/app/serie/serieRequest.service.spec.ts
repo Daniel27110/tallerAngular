@@ -1,11 +1,13 @@
 /* tslint:disable:no-unused-variable */
 
-import { TestBed, async, inject } from '@angular/core/testing';
+import { TestBed, inject } from '@angular/core/testing';
 import { SerieRequestService } from './serieRequest.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('Service: SerieRequest', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
       providers: [SerieRequestService]
     });
   });
